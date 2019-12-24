@@ -1,0 +1,1592 @@
+
+*** Running vivado
+    with args -log design_1_image_filter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_image_filter_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_image_filter_0_0.tcl -notrace
+Command: synth_design -top design_1_image_filter_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12626 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1398.715 ; gain = 89.992 ; free physical = 15615 ; free virtual = 72584
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_image_filter_0_0' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ip/design_1_image_filter_0_0/synth/design_1_image_filter_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'image_filter' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter.v:12]
+	Parameter C_S_AXI_CONTROL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_HOSTMEM_WSTRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'image_filter_CONTROL_BUS_s_axi' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_CONTROL_BUS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 5'b00000 
+	Parameter ADDR_GIE bound to: 5'b00100 
+	Parameter ADDR_IER bound to: 5'b01000 
+	Parameter ADDR_ISR bound to: 5'b01100 
+	Parameter ADDR_IN_V_DATA_0 bound to: 5'b10000 
+	Parameter ADDR_IN_V_CTRL bound to: 5'b10100 
+	Parameter ADDR_OUT_V_DATA_0 bound to: 5'b11000 
+	Parameter ADDR_OUT_V_CTRL bound to: 5'b11100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_CONTROL_BUS_s_axi.v:203]
+INFO: [Synth 8-256] done synthesizing module 'image_filter_CONTROL_BUS_s_axi' (1#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_CONTROL_BUS_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:10]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 64 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_throttl' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:689]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter threshold bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_throttl' (2#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:689]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_write' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1536]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 64 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 8 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 3 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 8 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 3 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 9'b111111111 
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_fifo' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_fifo' (3#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_reg_slice' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:295]
+	Parameter N bound to: 64 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_reg_slice' (4#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:295]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized0' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized0' (4#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_buffer' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:508]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 72 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_buffer' (5#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:508]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized1' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized1' (5#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized2' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_fifo__parameterized2' (5#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:399]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1903]
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_write' (6#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1536]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_read' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:741]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 64 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 8 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 3 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 8 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 3 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 9'b111111111 
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_buffer__parameterized0' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:508]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 67 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_buffer__parameterized0' (6#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:508]
+INFO: [Synth 8-638] synthesizing module 'image_filter_hostmem_m_axi_reg_slice__parameterized0' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:295]
+	Parameter N bound to: 66 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_reg_slice__parameterized0' (6#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:295]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1088]
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi_read' (7#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:741]
+INFO: [Synth 8-256] done synthesizing module 'image_filter_hostmem_m_axi' (8#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'Mem2Stream_Batch9' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_Batch9.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_Batch9.v:167]
+INFO: [Synth 8-638] synthesizing module 'Mem2Stream' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_state3 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_state4 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state5 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_state6 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_state7 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_state8 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state12 bound to: 10'b1000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:144]
+INFO: [Synth 8-256] done synthesizing module 'Mem2Stream' (9#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:10]
+INFO: [Synth 8-638] synthesizing module 'Mem2Stream_1' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_state3 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_state4 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state5 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_state6 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_state7 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_state8 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state12 bound to: 10'b1000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:144]
+INFO: [Synth 8-256] done synthesizing module 'Mem2Stream_1' (10#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Mem2Stream_Batch9' (11#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_Batch9.v:10]
+INFO: [Synth 8-638] synthesizing module 'StreamingDataWidthCo' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state5 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:59]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:415]
+INFO: [Synth 8-256] done synthesizing module 'StreamingDataWidthCo' (12#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:10]
+INFO: [Synth 8-638] synthesizing module 'image_process_32u_s' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_process_32u_s.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state5 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_process_32u_s.v:59]
+INFO: [Synth 8-256] done synthesizing module 'image_process_32u_s' (13#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_process_32u_s.v:10]
+INFO: [Synth 8-638] synthesizing module 'StreamingDataWidthCo_1' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state4 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:51]
+INFO: [Synth 8-256] done synthesizing module 'StreamingDataWidthCo_1' (14#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:10]
+INFO: [Synth 8-638] synthesizing module 'Stream2Mem_Batch' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_Batch.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_Batch.v:160]
+INFO: [Synth 8-638] synthesizing module 'Stream2Mem' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 8'b00000001 
+	Parameter ap_ST_fsm_state2 bound to: 8'b00000010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 8'b00000100 
+	Parameter ap_ST_fsm_state6 bound to: 8'b00001000 
+	Parameter ap_ST_fsm_state7 bound to: 8'b00010000 
+	Parameter ap_ST_fsm_state8 bound to: 8'b00100000 
+	Parameter ap_ST_fsm_state9 bound to: 8'b01000000 
+	Parameter ap_ST_fsm_state10 bound to: 8'b10000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:143]
+INFO: [Synth 8-256] done synthesizing module 'Stream2Mem' (15#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:10]
+INFO: [Synth 8-638] synthesizing module 'Stream2Mem_1' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 8'b00000001 
+	Parameter ap_ST_fsm_state2 bound to: 8'b00000010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 8'b00000100 
+	Parameter ap_ST_fsm_state6 bound to: 8'b00001000 
+	Parameter ap_ST_fsm_state7 bound to: 8'b00010000 
+	Parameter ap_ST_fsm_state8 bound to: 8'b00100000 
+	Parameter ap_ST_fsm_state9 bound to: 8'b01000000 
+	Parameter ap_ST_fsm_state10 bound to: 8'b10000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:143]
+INFO: [Synth 8-256] done synthesizing module 'Stream2Mem_1' (16#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Stream2Mem_Batch' (17#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_Batch.v:10]
+INFO: [Synth 8-638] synthesizing module 'fifo_w64_d128_A' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:11]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w64_d128_A' (18#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:11]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d4_A' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d4_A_shiftReg' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d4_A_shiftReg' (19#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:11]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d4_A' (20#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:45]
+INFO: [Synth 8-638] synthesizing module 'fifo_w32_d128_A' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:11]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w32_d128_A' (21#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:11]
+INFO: [Synth 8-638] synthesizing module 'start_for_Streamibkb' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_Streamibkb.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'start_for_Streamibkb_shiftReg' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_Streamibkb.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_Streamibkb_shiftReg' (22#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_Streamibkb.v:11]
+INFO: [Synth 8-256] done synthesizing module 'start_for_Streamibkb' (23#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_Streamibkb.v:45]
+INFO: [Synth 8-638] synthesizing module 'start_for_image_pcud' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_image_pcud.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'start_for_image_pcud_shiftReg' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_image_pcud.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_image_pcud_shiftReg' (24#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_image_pcud.v:11]
+INFO: [Synth 8-256] done synthesizing module 'start_for_image_pcud' (25#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_image_pcud.v:45]
+INFO: [Synth 8-638] synthesizing module 'start_for_StreamidEe' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_StreamidEe.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'start_for_StreamidEe_shiftReg' [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_StreamidEe.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'start_for_StreamidEe_shiftReg' (26#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_StreamidEe.v:11]
+INFO: [Synth 8-256] done synthesizing module 'start_for_StreamidEe' (27#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/start_for_StreamidEe.v:45]
+INFO: [Synth 8-256] done synthesizing module 'image_filter' (28#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter.v:12]
+INFO: [Synth 8-256] done synthesizing module 'design_1_image_filter_0_0' (29#1) [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ip/design_1_image_filter_0_0/synth/design_1_image_filter_0_0.v:58]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_ARREADY
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RVALID
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[63]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[62]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[61]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[60]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[59]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[58]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[57]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[56]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[55]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[54]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[53]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[52]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[51]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[50]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[49]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[48]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[47]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[46]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[45]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[44]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[43]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[42]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[41]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[40]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[39]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[38]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[37]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[36]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[35]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[34]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[33]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[32]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[31]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[30]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[29]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[28]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[27]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[26]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[25]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[24]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[23]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[22]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[21]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[20]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[19]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[18]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[17]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[16]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[15]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[14]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[13]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[12]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[11]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[10]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[9]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[8]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[7]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[6]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[5]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[4]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[3]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[2]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[1]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RDATA[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RLAST
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RID[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RUSER[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RRESP[1]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_RRESP[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_BRESP[1]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_BRESP[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_BID[0]
+WARNING: [Synth 8-3331] design Stream2Mem_1 has unconnected port m_axi_out_V_BUSER[0]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_ARREADY
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RVALID
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[63]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[62]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[61]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[60]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[59]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[58]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[57]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[56]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[55]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[54]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[53]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[52]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[51]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[50]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[49]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[48]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[47]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[46]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[45]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[44]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[43]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[42]
+WARNING: [Synth 8-3331] design Stream2Mem has unconnected port m_axi_out_V_RDATA[41]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1458.262 ; gain = 149.539 ; free physical = 15582 ; free virtual = 72553
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1458.262 ; gain = 149.539 ; free physical = 15527 ; free virtual = 72498
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ip/design_1_image_filter_0_0/constraints/image_filter_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ip/design_1_image_filter_0_0/constraints/image_filter_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.runs/design_1_image_filter_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.runs/design_1_image_filter_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1865.395 ; gain = 0.008 ; free physical = 14393 ; free virtual = 71367
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:01:40 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 14517 ; free virtual = 71491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:01:40 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 14517 ; free virtual = 71491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.runs/design_1_image_filter_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:40 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 14519 ; free virtual = 71493
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'image_filter_CONTROL_BUS_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element throttl_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:723]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:591]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:487]
+WARNING: [Synth 8-6014] Unused sequential element pout_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:485]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[5] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[6] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[7] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[8] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[9] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[10] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[11] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[12] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[13] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[14] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:500]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1976]
+WARNING: [Synth 8-6014] Unused sequential element bus_equal_gen.len_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:2119]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:591]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1161]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum2_reg_150_reg' and it is trimmed from '33' to '32' bits. [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:273]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_138_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_103_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:252]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum2_reg_150_reg' and it is trimmed from '33' to '32' bits. [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:273]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_138_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_103_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:252]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_i_i_fu_136_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_6_i_i_fu_146_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element rep_fu_74_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_Batch9.v:450]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_126_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_fu_138_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element o_reg_95_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:194]
+WARNING: [Synth 8-6014] Unused sequential element t_reg_106_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:210]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_88_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_77_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_process_32u_s.v:170]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_111_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_fu_66_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:136]
+WARNING: [Synth 8-6014] Unused sequential element t_reg_95_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:152]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum2_reg_157_reg' and it is trimmed from '33' to '32' bits. [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:284]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_145_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_110_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:269]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum2_reg_157_reg' and it is trimmed from '33' to '32' bits. [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:284]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_fu_145_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_110_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:269]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_i_fu_116_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tmp_1_i_fu_126_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element rep_fu_68_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_Batch.v:427]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:93]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:92]
+WARNING: [Synth 8-6014] Unused sequential element SRL_SIG_reg[0] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:36]
+WARNING: [Synth 8-6014] Unused sequential element SRL_SIG_reg[1] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:36]
+WARNING: [Synth 8-6014] Unused sequential element SRL_SIG_reg[2] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:36]
+WARNING: [Synth 8-6014] Unused sequential element SRL_SIG_reg[3] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:36]
+WARNING: [Synth 8-6014] Unused sequential element SRL_SIG_reg[4] was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:36]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element mOutPtr_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:87]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:93]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'image_filter_CONTROL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:01:42 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 14477 ; free virtual = 71451
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 13    
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 10    
+	   2 Input      7 Bit       Adders := 12    
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 8     
+	   2 Input      2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               72 Bit    Registers := 3     
+	               67 Bit    Registers := 3     
+	               66 Bit    Registers := 2     
+	               64 Bit    Registers := 20    
+	               32 Bit    Registers := 28    
+	               29 Bit    Registers := 2     
+	               25 Bit    Registers := 2     
+	               20 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 14    
+	                7 Bit    Registers := 10    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 143   
++---RAMs : 
+	              18K Bit         RAMs := 1     
+	              16K Bit         RAMs := 1     
+	               8K Bit         RAMs := 2     
+	               4K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 16    
+	   2 Input     20 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 2     
+	   3 Input     10 Bit        Muxes := 2     
+	  11 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 14    
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 17    
+	   6 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 39    
+	   5 Input      2 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 173   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module image_filter_CONTROL_BUS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module image_filter_hostmem_m_axi_throttl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module image_filter_hostmem_m_axi_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               72 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              18K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     20 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+Module image_filter_hostmem_m_axi_buffer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               67 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_reg_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               66 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_filter_hostmem_m_axi_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     20 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+Module Mem2Stream 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module Mem2Stream_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input     10 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module Mem2Stream_Batch9 
+Detailed RTL Component Info : 
++---Registers : 
+	               29 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 13    
+Module StreamingDataWidthCo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module image_process_32u_s 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module StreamingDataWidthCo_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module Stream2Mem 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module Stream2Mem_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module Stream2Mem_Batch 
+Detailed RTL Component Info : 
++---Registers : 
+	               29 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 16    
+Module fifo_w64_d128_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module fifo_w32_d4_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w32_d128_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               4K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module start_for_Streamibkb_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_Streamibkb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_image_pcud_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_image_pcud 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_StreamidEe_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_StreamidEe 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_filter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element throttl_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:723]
+WARNING: [Synth 8-6014] Unused sequential element buff_wdata/usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element fifo_resp/pout_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:485]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1976]
+WARNING: [Synth 8-6014] Unused sequential element bus_equal_gen.len_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:2119]
+WARNING: [Synth 8-6014] Unused sequential element fifo_rctl/q_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:437]
+WARNING: [Synth 8-6014] Unused sequential element buff_rdata/usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element fifo_rctl/pout_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:485]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_filter_hostmem_m_axi.v:1161]
+INFO: [Synth 8-5546] ROM "grp_Mem2Stream_fu_98/tmp_fu_138_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "grp_Mem2Stream_1_fu_108/tmp_fu_138_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_i_i_fu_136_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element grp_Mem2Stream_fu_98/i_reg_103_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream.v:252]
+WARNING: [Synth 8-6014] Unused sequential element grp_Mem2Stream_1_fu_108/i_reg_103_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_1.v:252]
+WARNING: [Synth 8-6014] Unused sequential element rep_fu_74_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Mem2Stream_Batch9.v:450]
+INFO: [Synth 8-5546] ROM "exitcond_fu_126_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_fu_138_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element t_reg_106_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:210]
+WARNING: [Synth 8-6014] Unused sequential element o_reg_95_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo.v:194]
+INFO: [Synth 8-5546] ROM "exitcond_fu_88_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_77_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/image_process_32u_s.v:170]
+INFO: [Synth 8-5546] ROM "exitcond_fu_111_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element t_reg_95_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:152]
+WARNING: [Synth 8-6014] Unused sequential element i_fu_66_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/StreamingDataWidthCo_1.v:136]
+INFO: [Synth 8-5546] ROM "grp_Stream2Mem_fu_78/tmp_fu_145_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "grp_Stream2Mem_1_fu_88/tmp_fu_145_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_i_fu_116_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element grp_Stream2Mem_fu_78/i_reg_110_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem.v:269]
+WARNING: [Synth 8-6014] Unused sequential element grp_Stream2Mem_1_fu_88/i_reg_110_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_1.v:269]
+WARNING: [Synth 8-6014] Unused sequential element rep_fu_68_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/Stream2Mem_Batch.v:427]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:92]
+WARNING: [Synth 8-6014] Unused sequential element mOutPtr_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d4_A.v:87]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:92]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w32_d128_A.v:92]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.srcs/sources_1/bd/design_1/ipshared/2f96/hdl/verilog/fifo_w64_d128_A.v:92]
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[0]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[1]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[2]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[3]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[4]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[5]' (FD) to 'inst/Mem2Stream_Batch9_U0/tmp_4_reg_203_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Mem2Stream_Batch9_U0/\tmp_4_reg_203_reg[6] )
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[0]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[1]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[2]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[3]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[4]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[5]' (FD) to 'inst/Stream2Mem_Batch_U0/tmp_3_reg_183_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Stream2Mem_Batch_U0/\tmp_3_reg_183_reg[6] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[63]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[61]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[60]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[59]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[58]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[57]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[56]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[55]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[54]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[53]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[52]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[51]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[50]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[49]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[48]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[47]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[46]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[45]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[44]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[42]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[41]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[40]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[38]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[37]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[36]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[35]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[34]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[33]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_read/rs_rreq/data_p2_reg[32] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[63]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[61]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[62]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[60]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[59]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[58]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[57]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[56]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[55]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[54]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[53]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[52]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[51]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[50]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[49]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[48]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[47]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[46]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[45]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[44]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[42]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[41]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[40]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[38]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[37]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[36]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[35]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[34]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[33]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/rs_wreq/data_p2_reg[32] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/start_addr_reg[0]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/align_len_reg[0]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/align_len_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/start_addr_reg[1]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/start_addr_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_read/start_addr_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/start_addr_reg[0]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/start_addr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/align_len_reg[0]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/align_len_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/start_addr_reg[1]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/start_addr_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/start_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/StreamingDataWidthCo_1_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/StreamingDataWidthCo_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_process_32u_U0/ap_done_reg_reg)
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[64]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[65]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[65]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[66]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[66]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[67]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[67]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[68]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[68]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[69]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[69]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[70]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[70]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[71]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Mem2Stream_Batch9_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Stream2Mem_Batch_U0/ap_done_reg_reg)
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[4]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[5]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]' (FDRE) to 'inst/image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[63]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[61]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[62]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[60]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[59]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[58]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[57]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[56]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[55]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[54]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[53]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[52]' (FDE) to 'inst/image_filter_hostmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[32]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_read/rs_rreq/data_p1_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/rs_wreq/data_p1_reg[32] )
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_resp_to_user/q_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_resp_to_user/q_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/align_len_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/align_len_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/end_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/end_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/end_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[7]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[4]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/sect_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/sect_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/sect_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bresp_tmp_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bresp_tmp_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[31]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[30]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[29]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/q_tmp_reg[65]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/q_tmp_reg[64]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/dout_buf_reg[65]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/dout_buf_reg[64]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/bus_equal_gen.resp_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/bus_equal_gen.resp_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p2_reg[65]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p2_reg[64]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p1_reg[65]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p1_reg[64]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/align_len_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/align_len_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/end_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/end_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/end_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/could_multi_bursts.arlen_buf_reg[7]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/sect_addr_buf_reg[2]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/sect_addr_buf_reg[1]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/sect_addr_buf_reg[0]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_fu_98/ap_reg_ioackin_m_axi_in_V_ARREADY_reg) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_1_fu_108/ap_reg_ioackin_m_axi_in_V_ARREADY_reg) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_fu_98/sum2_reg_150_reg[31]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_fu_98/sum2_reg_150_reg[30]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_fu_98/sum2_reg_150_reg[29]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_1_fu_108/sum2_reg_150_reg[31]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_1_fu_108/sum2_reg_150_reg[30]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (grp_Mem2Stream_1_fu_108/sum2_reg_150_reg[29]) is unused and will be removed from module Mem2Stream_Batch9.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module StreamingDataWidthCo.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module image_process_32u_s.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module StreamingDataWidthCo_1.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_fu_78/ap_reg_ioackin_m_axi_out_V_AWREADY_reg) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_1_fu_88/ap_reg_ioackin_m_axi_out_V_AWREADY_reg) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_fu_78/sum2_reg_157_reg[31]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_fu_78/sum2_reg_157_reg[30]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_fu_78/sum2_reg_157_reg[29]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_1_fu_88/sum2_reg_157_reg[31]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_1_fu_88/sum2_reg_157_reg[30]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (grp_Stream2Mem_1_fu_88/sum2_reg_157_reg[29]) is unused and will be removed from module Stream2Mem_Batch.
+WARNING: [Synth 8-3332] Sequential element (start_for_Streamibkb_U/U_start_for_Streamibkb_ram/SRL_SIG_reg[0][0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (start_for_Streamibkb_U/U_start_for_Streamibkb_ram/SRL_SIG_reg[1][0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (start_for_image_pcud_U/U_start_for_image_pcud_ram/SRL_SIG_reg[0][0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (start_for_image_pcud_U/U_start_for_image_pcud_ram/SRL_SIG_reg[1][0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (start_for_StreamidEe_U/U_start_for_StreamidEe_ram/SRL_SIG_reg[0][0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (start_for_StreamidEe_U/U_start_for_StreamidEe_ram/SRL_SIG_reg[1][0]) is unused and will be removed from module image_filter.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_read/fifo_rreq/q_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/fifo_wreq/q_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/image_filter_hostmem_m_axi_U/\bus_write/bus_equal_gen.fifo_burst/q_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/q_reg[5]) is unused and will be removed from module image_filter_hostmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[32]) is unused and will be removed from module image_filter_hostmem_m_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:55 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 14452 ; free virtual = 71427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                        | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_filter_hostmem_m_axi_buffer:                 | mem_reg    | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|image_filter_hostmem_m_axi_buffer__parameterized0: | mem_reg    | 256 x 67(READ_FIRST)   | W |   | 256 x 67(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|fifo_w64_d128_A:                                   | mem_reg    | 128 x 64(READ_FIRST)   | W |   | 128 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|fifo_w32_d128_A:                                   | mem_reg    | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|fifo_w32_d128_A:                                   | mem_reg    | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|fifo_w64_d128_A:                                   | mem_reg    | 128 x 64(READ_FIRST)   | W |   | 128 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:02:14 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15415 ; free virtual = 72392
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:02:16 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15424 ; free virtual = 72401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                        | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_filter_hostmem_m_axi_buffer:                 | mem_reg    | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|image_filter_hostmem_m_axi_buffer__parameterized0: | mem_reg    | 256 x 67(READ_FIRST)   | W |   | 256 x 67(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|fifo_w64_d128_A:                                   | mem_reg    | 128 x 64(READ_FIRST)   | W |   | 128 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|fifo_w32_d128_A:                                   | mem_reg    | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/inter0_2_V_V_U                                | mem_reg    | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|fifo_w64_d128_A:                                   | mem_reg    | 128 x 64(READ_FIRST)   | W |   | 128 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++---------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[2]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[1]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[0]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[2]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[1]) is unused and will be removed from module image_filter.
+WARNING: [Synth 8-3332] Sequential element (image_filter_hostmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[0]) is unused and will be removed from module image_filter.
+INFO: [Synth 8-4480] The timing for the instance inst/image_filter_hostmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_filter_hostmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/inter0_V_V_U/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/inter0_1_V_V_U/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/inter0_2_V_V_U/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/memOutStrm_V_V_U/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:02:19 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15401 ; free virtual = 72378
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15398 ; free virtual = 72375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15398 ; free virtual = 72375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15397 ; free virtual = 72374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15397 ; free virtual = 72374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15404 ; free virtual = 72381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15404 ; free virtual = 72381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|image_filter | Stream2Mem_Batch_U0/grp_Stream2Mem_fu_78/ap_CS_fsm_reg[6]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|image_filter | Stream2Mem_Batch_U0/grp_Stream2Mem_1_fu_88/ap_CS_fsm_reg[6] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[4]     | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[4]     | 8      | 64         | 64     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[14]    | 16     | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[4]     | 8      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | SRL_SIG_reg[4] | 8      | 32         | 32     | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   149|
+|2     |LUT1     |    41|
+|3     |LUT2     |   257|
+|4     |LUT3     |   647|
+|5     |LUT4     |   321|
+|6     |LUT5     |   250|
+|7     |LUT6     |   364|
+|8     |RAMB18E1 |     2|
+|9     |RAMB36E1 |     4|
+|10    |SRL16E   |    99|
+|11    |FDRE     |  2774|
+|12    |FDSE     |    24|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+-----------------------------------------------------+------+
+|      |Instance                             |Module                                               |Cells |
++------+-------------------------------------+-----------------------------------------------------+------+
+|1     |top                                  |                                                     |  4932|
+|2     |  inst                               |image_filter                                         |  4932|
+|3     |    Mem2Stream_Batch9_U0             |Mem2Stream_Batch9                                    |   595|
+|4     |      grp_Mem2Stream_1_fu_108        |Mem2Stream_1                                         |   216|
+|5     |      grp_Mem2Stream_fu_98           |Mem2Stream                                           |   246|
+|6     |    Stream2Mem_Batch_U0              |Stream2Mem_Batch                                     |   571|
+|7     |      grp_Stream2Mem_1_fu_88         |Stream2Mem_1                                         |   249|
+|8     |      grp_Stream2Mem_fu_78           |Stream2Mem                                           |   196|
+|9     |    StreamingDataWidthCo_1_U0        |StreamingDataWidthCo_1                               |   136|
+|10    |    StreamingDataWidthCo_U0          |StreamingDataWidthCo                                 |   256|
+|11    |    image_filter_CONTROL_BUS_s_axi_U |image_filter_CONTROL_BUS_s_axi                       |   245|
+|12    |    image_filter_hostmem_m_axi_U     |image_filter_hostmem_m_axi                           |  2142|
+|13    |      bus_read                       |image_filter_hostmem_m_axi_read                      |  1096|
+|14    |        buff_rdata                   |image_filter_hostmem_m_axi_buffer__parameterized0    |   271|
+|15    |        fifo_rctl                    |image_filter_hostmem_m_axi_fifo__parameterized1_2    |    34|
+|16    |        fifo_rreq                    |image_filter_hostmem_m_axi_fifo__parameterized0_3    |   110|
+|17    |        rs_rdata                     |image_filter_hostmem_m_axi_reg_slice__parameterized0 |   200|
+|18    |        rs_rreq                      |image_filter_hostmem_m_axi_reg_slice_4               |    74|
+|19    |      bus_write                      |image_filter_hostmem_m_axi_write                     |  1022|
+|20    |        buff_wdata                   |image_filter_hostmem_m_axi_buffer                    |   287|
+|21    |        \bus_equal_gen.fifo_burst    |image_filter_hostmem_m_axi_fifo                      |    34|
+|22    |        fifo_resp                    |image_filter_hostmem_m_axi_fifo__parameterized1      |    40|
+|23    |        fifo_resp_to_user            |image_filter_hostmem_m_axi_fifo__parameterized2      |    12|
+|24    |        fifo_wreq                    |image_filter_hostmem_m_axi_fifo__parameterized0      |   109|
+|25    |        rs_wreq                      |image_filter_hostmem_m_axi_reg_slice                 |   101|
+|26    |      wreq_throttl                   |image_filter_hostmem_m_axi_throttl                   |    24|
+|27    |    image_process_32u_U0             |image_process_32u_s                                  |    94|
+|28    |    inter0_1_V_V_U                   |fifo_w32_d128_A                                      |   155|
+|29    |    inter0_2_V_V_U                   |fifo_w32_d128_A_0                                    |   157|
+|30    |    inter0_V_V_U                     |fifo_w64_d128_A                                      |   249|
+|31    |    memOutStrm_V_V_U                 |fifo_w64_d128_A_1                                    |   250|
+|32    |    out_V_c_U                        |fifo_w32_d4_A                                        |    48|
+|33    |      U_fifo_w32_d4_A_ram            |fifo_w32_d4_A_shiftReg                               |    32|
+|34    |    start_for_Streamibkb_U           |start_for_Streamibkb                                 |    11|
+|35    |    start_for_StreamidEe_U           |start_for_StreamidEe                                 |    11|
+|36    |    start_for_image_pcud_U           |start_for_image_pcud                                 |    11|
++------+-------------------------------------+-----------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15404 ; free virtual = 72381
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 316 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:16 . Memory (MB): peak = 1865.395 ; gain = 149.539 ; free physical = 15463 ; free virtual = 72440
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:02:21 . Memory (MB): peak = 1865.395 ; gain = 556.672 ; free physical = 15463 ; free virtual = 72440
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 155 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+262 Infos, 287 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:02:24 . Memory (MB): peak = 1899.621 ; gain = 615.723 ; free physical = 15467 ; free virtual = 72443
+INFO: [Common 17-1381] The checkpoint '/home/ecelrc/students/rli3/Vivado/projects/final_project_1/final_project_1.runs/design_1_image_filter_0_0_synth_1/design_1_image_filter_0_0.dcp' has been generated.

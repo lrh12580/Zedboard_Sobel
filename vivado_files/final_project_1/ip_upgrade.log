@@ -1,0 +1,532 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Fri Dec 13 12:04:26 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912121957) to (Rev. 1912131200)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_image_filter_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_hostmem'
+
+-Upgrade has added interface 'm_axi_hostmem_1' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'm_axi_hostmem_2' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_image_filter_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'm_axi_hostmem_ARADDR'
+
+-Upgrade has removed port 'm_axi_hostmem_ARBURST'
+
+-Upgrade has removed port 'm_axi_hostmem_ARCACHE'
+
+-Upgrade has removed port 'm_axi_hostmem_ARLEN'
+
+-Upgrade has removed port 'm_axi_hostmem_ARLOCK'
+
+-Upgrade has removed port 'm_axi_hostmem_ARPROT'
+
+-Upgrade has removed port 'm_axi_hostmem_ARQOS'
+
+-Upgrade has removed port 'm_axi_hostmem_ARREADY'
+
+-Upgrade has removed port 'm_axi_hostmem_ARREGION'
+
+-Upgrade has removed port 'm_axi_hostmem_ARSIZE'
+
+-Upgrade has removed port 'm_axi_hostmem_ARVALID'
+
+-Upgrade has removed port 'm_axi_hostmem_AWADDR'
+
+-Upgrade has removed port 'm_axi_hostmem_AWBURST'
+
+-Upgrade has removed port 'm_axi_hostmem_AWCACHE'
+
+-Upgrade has removed port 'm_axi_hostmem_AWLEN'
+
+-Upgrade has removed port 'm_axi_hostmem_AWLOCK'
+
+-Upgrade has removed port 'm_axi_hostmem_AWPROT'
+
+-Upgrade has removed port 'm_axi_hostmem_AWQOS'
+
+-Upgrade has removed port 'm_axi_hostmem_AWREADY'
+
+-Upgrade has removed port 'm_axi_hostmem_AWREGION'
+
+-Upgrade has removed port 'm_axi_hostmem_AWSIZE'
+
+-Upgrade has removed port 'm_axi_hostmem_AWVALID'
+
+-Upgrade has removed port 'm_axi_hostmem_BREADY'
+
+-Upgrade has removed port 'm_axi_hostmem_BRESP'
+
+-Upgrade has removed port 'm_axi_hostmem_BVALID'
+
+-Upgrade has removed port 'm_axi_hostmem_RDATA'
+
+-Upgrade has removed port 'm_axi_hostmem_RLAST'
+
+-Upgrade has removed port 'm_axi_hostmem_RREADY'
+
+-Upgrade has removed port 'm_axi_hostmem_RRESP'
+
+-Upgrade has removed port 'm_axi_hostmem_RVALID'
+
+-Upgrade has removed port 'm_axi_hostmem_WDATA'
+
+-Upgrade has removed port 'm_axi_hostmem_WLAST'
+
+-Upgrade has removed port 'm_axi_hostmem_WREADY'
+
+-Upgrade has removed port 'm_axi_hostmem_WSTRB'
+
+-Upgrade has removed port 'm_axi_hostmem_WVALID'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARADDR'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARBURST'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARCACHE'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARLEN'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARLOCK'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARPROT'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARQOS'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARREADY'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARREGION'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARSIZE'
+
+-Upgrade has added port 'm_axi_hostmem_1_ARVALID'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWADDR'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWBURST'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWCACHE'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWLEN'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWLOCK'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWPROT'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWQOS'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWREADY'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWREGION'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWSIZE'
+
+-Upgrade has added port 'm_axi_hostmem_1_AWVALID'
+
+-Upgrade has added port 'm_axi_hostmem_1_BREADY'
+
+-Upgrade has added port 'm_axi_hostmem_1_BRESP'
+
+-Upgrade has added port 'm_axi_hostmem_1_BVALID'
+
+-Upgrade has added port 'm_axi_hostmem_1_RDATA'
+
+-Upgrade has added port 'm_axi_hostmem_1_RLAST'
+
+-Upgrade has added port 'm_axi_hostmem_1_RREADY'
+
+-Upgrade has added port 'm_axi_hostmem_1_RRESP'
+
+-Upgrade has added port 'm_axi_hostmem_1_RVALID'
+
+-Upgrade has added port 'm_axi_hostmem_1_WDATA'
+
+-Upgrade has added port 'm_axi_hostmem_1_WLAST'
+
+-Upgrade has added port 'm_axi_hostmem_1_WREADY'
+
+-Upgrade has added port 'm_axi_hostmem_1_WSTRB'
+
+-Upgrade has added port 'm_axi_hostmem_1_WVALID'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARADDR'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARBURST'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARCACHE'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARLEN'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARLOCK'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARPROT'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARQOS'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARREADY'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARREGION'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARSIZE'
+
+-Upgrade has added port 'm_axi_hostmem_2_ARVALID'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWADDR'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWBURST'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWCACHE'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWLEN'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWLOCK'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWPROT'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWQOS'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWREADY'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWREGION'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWSIZE'
+
+-Upgrade has added port 'm_axi_hostmem_2_AWVALID'
+
+-Upgrade has added port 'm_axi_hostmem_2_BREADY'
+
+-Upgrade has added port 'm_axi_hostmem_2_BRESP'
+
+-Upgrade has added port 'm_axi_hostmem_2_BVALID'
+
+-Upgrade has added port 'm_axi_hostmem_2_RDATA'
+
+-Upgrade has added port 'm_axi_hostmem_2_RLAST'
+
+-Upgrade has added port 'm_axi_hostmem_2_RREADY'
+
+-Upgrade has added port 'm_axi_hostmem_2_RRESP'
+
+-Upgrade has added port 'm_axi_hostmem_2_RVALID'
+
+-Upgrade has added port 'm_axi_hostmem_2_WDATA'
+
+-Upgrade has added port 'm_axi_hostmem_2_WLAST'
+
+-Upgrade has added port 'm_axi_hostmem_2_WREADY'
+
+-Upgrade has added port 'm_axi_hostmem_2_WSTRB'
+
+-Upgrade has added port 'm_axi_hostmem_2_WVALID'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_HOSTMEM_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_HOSTMEM_ID_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_DATA_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '64'
+
+Parameter 'C_M_AXI_HOSTMEM_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_HOSTMEM_AWUSER_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_WUSER_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_BUSER_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_ARUSER_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_RUSER_WIDTH' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_HOSTMEM_USER_VALUE' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_HOSTMEM_PROT_VALUE' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_HOSTMEM_CACHE_VALUE' is no longer present on the upgraded IP 'design_1_image_filter_0_0', and cannot be set to '"0011"'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:image_filter:1.0 -user_name design_1_image_filter_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_1_image_filter_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_CONTROL_BUS:m_axi_hostmem} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.ap_clk.FREQ_HZ {100000000} \
+  CONFIG.ap_clk.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_clk.PHASE {0.000} \
+  CONFIG.ap_rst_n.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {undef} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_CONTROL_BUS.ADDR_WIDTH {6} \
+  CONFIG.s_axi_CONTROL_BUS.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_CONTROL_BUS.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_CONTROL_BUS.BUSER_WIDTH {0} \
+  CONFIG.s_axi_CONTROL_BUS.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.s_axi_CONTROL_BUS.DATA_WIDTH {32} \
+  CONFIG.s_axi_CONTROL_BUS.FREQ_HZ {100000000} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_BRESP {1} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_BURST {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_CACHE {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_LOCK {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_PROT {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_QOS {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_REGION {0} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_RRESP {1} \
+  CONFIG.s_axi_CONTROL_BUS.HAS_WSTRB {1} \
+  CONFIG.s_axi_CONTROL_BUS.ID_WIDTH {0} \
+  CONFIG.s_axi_CONTROL_BUS.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.s_axi_CONTROL_BUS.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_CONTROL_BUS.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_CONTROL_BUS.NUM_READ_THREADS {4} \
+  CONFIG.s_axi_CONTROL_BUS.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_CONTROL_BUS.NUM_WRITE_THREADS {4} \
+  CONFIG.s_axi_CONTROL_BUS.PHASE {0.000} \
+  CONFIG.s_axi_CONTROL_BUS.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_CONTROL_BUS.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_CONTROL_BUS.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CONTROL_BUS.RUSER_WIDTH {0} \
+  CONFIG.s_axi_CONTROL_BUS.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_CONTROL_BUS.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CONTROL_BUS.WUSER_WIDTH {0} " [get_ips design_1_image_filter_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Dec 12 20:00:43 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912121533) to (Rev. 1912121957)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Dec 12 15:36:47 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912071415) to (Rev. 1912121533)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sat Dec  7 14:18:09 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912061029) to (Rev. 1912071415)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_image_filter_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_CONTROL_BUS_ARADDR' width 6 differs from original width 5
+
+-Upgraded port 's_axi_CONTROL_BUS_AWADDR' width 6 differs from original width 5
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Fri Dec  6 10:33:24 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912060913) to (Rev. 1912061029)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Fri Dec  6 09:19:53 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912060822) to (Rev. 1912060913)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Fri Dec  6 08:23:21 2019
+| Host         : kamek running 64-bit CentOS release 6.10 (Final)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_image_filter_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_image_filter_0_0 (xilinx.com:hls:image_filter:1.0) from (Rev. 1912060812) to (Rev. 1912060822)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_image_filter_0_0'.
+
+
+-Upgrade has removed interface 's_axi_control'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_image_filter_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_CONTROL_BUS_ARADDR' width 5 differs from original width 4
+
+-Upgraded port 's_axi_CONTROL_BUS_AWADDR' width 5 differs from original width 4
+
+-Upgrade has removed port 's_axi_control_ARADDR'
+
+-Upgrade has removed port 's_axi_control_ARREADY'
+
+-Upgrade has removed port 's_axi_control_ARVALID'
+
+-Upgrade has removed port 's_axi_control_AWADDR'
+
+-Upgrade has removed port 's_axi_control_AWREADY'
+
+-Upgrade has removed port 's_axi_control_AWVALID'
+
+-Upgrade has removed port 's_axi_control_BREADY'
+
+-Upgrade has removed port 's_axi_control_BRESP'
+
+-Upgrade has removed port 's_axi_control_BVALID'
+
+-Upgrade has removed port 's_axi_control_RDATA'
+
+-Upgrade has removed port 's_axi_control_RREADY'
+
+-Upgrade has removed port 's_axi_control_RRESP'
+
+-Upgrade has removed port 's_axi_control_RVALID'
+
+-Upgrade has removed port 's_axi_control_WDATA'
+
+-Upgrade has removed port 's_axi_control_WREADY'
+
+-Upgrade has removed port 's_axi_control_WSTRB'
+
+-Upgrade has removed port 's_axi_control_WVALID'
+
+

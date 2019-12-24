@@ -1,0 +1,29 @@
+/*
+Team 7
+Ruihao Li   UTEID:rl33579
+Guihong Li  UTEID:gl22449
+*/
+
+./system_wrapper.bit is the bit file for our final project
+./uImage-zynq-zed.dtb is the dtb for our final project
+
+
+./kernel_module contains the kernel module code for malloc continuous physical memory. 
+Petalinux provides "cma", which contains 16MB continuous physical memory for 0x1F000000 to 0x1FFFFFFF.
+The continuous physical memory is for support burst transmission between DRAM to on-chip memory.
+run 
+"make default"
+"sh load_KM.sh"
+Then it will malloc 13,000 KB memory from 0x1F100000
+
+
+./zedboard_code contains the code for server, software implementation, hardware accelerator 
+run
+"make all"
+"./main"
+Then it will start the server and listens to Android Client requests.
+
+
+./andorid_app contains the source code of our Andorid APP and APK.
+The Andorid APP could run at mobile phones with Andorid Version >= 6.0
+ 

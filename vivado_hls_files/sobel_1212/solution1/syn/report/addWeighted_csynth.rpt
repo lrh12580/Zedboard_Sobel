@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vivado HLS Report for 'addWeighted'
+================================================================
+* Date:           Fri Dec 13 11:11:33 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        sobel_1212
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.23|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  262165|  262165|  262165|  262165|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  262163|  262163|        21|          1|          1|  262144|    yes   |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    689|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     25|    1903|   3595|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     93|
+|Register         |        0|      -|     453|     32|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     25|    2356|   4409|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|     11|       2|      8|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |image_filter_daddcud_U40  |image_filter_daddcud  |        0|      3|  445|  1149|
+    |image_filter_dmuldEe_U41  |image_filter_dmuldEe  |        0|     11|  317|   578|
+    |image_filter_dmuldEe_U42  |image_filter_dmuldEe  |        0|     11|  317|   578|
+    |image_filter_sitoeOg_U43  |image_filter_sitoeOg  |        0|      0|  412|   645|
+    |image_filter_sitoeOg_U44  |image_filter_sitoeOg  |        0|      0|  412|   645|
+    +--------------------------+----------------------+---------+-------+-----+------+
+    |Total                     |                      |        0|     25| 1903|  3595|
+    +--------------------------+----------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+-------+---+-----+------------+------------+
+    |            Variable Name           | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+-------+---+-----+------------+------------+
+    |i_4_fu_164_p2                       |     +    |      0|  0|   26|          19|           1|
+    |sh_assign_fu_212_p2                 |     +    |      0|  0|   19|          11|          12|
+    |tmp_32_i_i_i_fu_226_p2              |     -    |      0|  0|   18|          10|          11|
+    |ap_block_state22_pp0_stage0_iter20  |    and   |      0|  0|    8|           1|           1|
+    |exitcond_fu_158_p2                  |   icmp   |      0|  0|   18|          19|          20|
+    |tmp_34_i_i_i_fu_255_p2              |   lshr   |      0|  0|  162|          54|          54|
+    |ap_block_pp0_stage0_01001           |    or    |      0|  0|    8|           1|           1|
+    |ap_block_state1                     |    or    |      0|  0|    8|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1    |    or    |      0|  0|    8|           1|           1|
+    |p_Val2_8_fu_289_p3                  |  select  |      0|  0|    8|           1|           8|
+    |sh_assign_3_fu_235_p3               |  select  |      0|  0|   12|           1|          12|
+    |tmp_35_i_i_i_fu_261_p2              |    shl   |      0|  0|  378|         113|         113|
+    |ap_enable_pp0                       |    xor   |      0|  0|    8|           1|           2|
+    |ap_enable_reg_pp0_iter1             |    xor   |      0|  0|    8|           2|           1|
+    +------------------------------------+----------+-------+---+-----+------------+------------+
+    |Total                               |          |      0|  0|  689|         235|         238|
+    +------------------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  21|          4|    1|          4|
+    |ap_done                   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter20  |   9|          2|    1|          2|
+    |dst_V_V_blk_n             |   9|          2|    1|          2|
+    |i_reg_127                 |   9|          2|   19|         38|
+    |real_start                |   9|          2|    1|          2|
+    |src_x_V_V_blk_n           |   9|          2|    1|          2|
+    |src_y_V_V_blk_n           |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  93|         20|   27|         56|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                 |   3|   0|    3|          0|
+    |ap_done_reg               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter20  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9   |   1|   0|    1|          0|
+    |exitcond_reg_297          |   1|   0|    1|          0|
+    |i_reg_127                 |  19|   0|   19|          0|
+    |loc_V_2_reg_352           |  52|   0|   52|          0|
+    |loc_V_reg_346             |  11|   0|   11|          0|
+    |p_Val2_8_reg_357          |   8|   0|    8|          0|
+    |start_once_reg            |   1|   0|    1|          0|
+    |tmp_34_reg_336            |  64|   0|   64|          0|
+    |tmp_36_reg_331            |  64|   0|   64|          0|
+    |tmp_37_reg_341            |  64|   0|   64|          0|
+    |tmp_V_7_reg_306           |   8|   0|    8|          0|
+    |tmp_V_8_reg_311           |   8|   0|    8|          0|
+    |tmp_s_reg_326             |  64|   0|   64|          0|
+    |exitcond_reg_297          |  64|  32|    1|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 453|  32|  390|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |  addWeighted | return value |
+|start_full_n       |  in |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_done            | out |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |  addWeighted | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |  addWeighted | return value |
+|start_out          | out |    1| ap_ctrl_hs |  addWeighted | return value |
+|start_write        | out |    1| ap_ctrl_hs |  addWeighted | return value |
+|src_x_V_V_dout     |  in |    8|   ap_fifo  |   src_x_V_V  |    pointer   |
+|src_x_V_V_empty_n  |  in |    1|   ap_fifo  |   src_x_V_V  |    pointer   |
+|src_x_V_V_read     | out |    1|   ap_fifo  |   src_x_V_V  |    pointer   |
+|src_y_V_V_dout     |  in |    8|   ap_fifo  |   src_y_V_V  |    pointer   |
+|src_y_V_V_empty_n  |  in |    1|   ap_fifo  |   src_y_V_V  |    pointer   |
+|src_y_V_V_read     | out |    1|   ap_fifo  |   src_y_V_V  |    pointer   |
+|dst_V_V_din        | out |    8|   ap_fifo  |    dst_V_V   |    pointer   |
+|dst_V_V_full_n     |  in |    1|   ap_fifo  |    dst_V_V   |    pointer   |
+|dst_V_V_write      | out |    1|   ap_fifo  |    dst_V_V   |    pointer   |
++-------------------+-----+-----+------------+--------------+--------------+
+

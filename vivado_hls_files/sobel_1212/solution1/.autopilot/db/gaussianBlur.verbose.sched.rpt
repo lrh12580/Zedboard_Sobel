@@ -1,0 +1,378 @@
+
+
+================================================================
+== Vivado HLS Report for 'gaussianBlur'
+================================================================
+* Date:           Fri Dec 13 11:11:25 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        sobel_1212
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.29|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  786960|  786960|  786960|  786960|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |       8|       8|         1|          -|          -|       9|    no    |
+        |- Loop 2  |  786435|  786435|         7|          3|          1|  262144|    yes   |
+        |- Loop 3  |     513|     513|         1|          -|          -|     513|    no    |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 7, States = { 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!exitcond2)
+	3  / (exitcond2)
+3 --> 
+	10  / (exitcond3)
+	4  / (!exitcond3)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	3  / true
+10 --> 
+	11  / true
+11 --> 
+	11  / (!exitcond)
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst_y_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str140, i32 0, i32 0, [1 x i8]* @p_str141, [1 x i8]* @p_str142, [1 x i8]* @p_str143, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str144, [1 x i8]* @p_str145)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %dst_x_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str133, i32 0, i32 0, [1 x i8]* @p_str134, [1 x i8]* @p_str135, [1 x i8]* @p_str136, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str137, [1 x i8]* @p_str138)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str126, i32 0, i32 0, [1 x i8]* @p_str127, [1 x i8]* @p_str128, [1 x i8]* @p_str129, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str130, [1 x i8]* @p_str131)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%lineBuff_val_0_V = alloca [512 x i8], align 1" [sobel_1212/core.cpp:177]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%lineBuff_val_1_V = alloca [512 x i8], align 1" [sobel_1212/core.cpp:177]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lineBuff_val_2_V = alloca [512 x i8], align 1" [sobel_1212/core.cpp:177]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_1 : Operation 18 [1/1] (1.76ns)   --->   "br label %.preheader237" [sobel_1212/core.cpp:173]
+
+ <State 2> : 2.23ns
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%i = phi i4 [ 0, %.preheader237.preheader ], [ %i_2, %.preheader237 ]"
+ST_2 : Operation 20 [1/1] (1.30ns)   --->   "%exitcond2 = icmp eq i4 %i, -7" [sobel_1212/core.cpp:173]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"
+ST_2 : Operation 22 [1/1] (1.73ns)   --->   "%i_2 = add i4 %i, 1" [sobel_1212/core.cpp:173]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %0, label %.preheader237" [sobel_1212/core.cpp:173]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%rbegin_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([60 x i8]* @hls_KD_KD_LineBuffe) nounwind"
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%rend_i = call i32 (...)* @_ssdm_op_SpecRegionEnd([60 x i8]* @hls_KD_KD_LineBuffe, i32 %rbegin_i) nounwind"
+ST_2 : Operation 26 [1/1] (1.76ns)   --->   "br label %1" [sobel_1212/core.cpp:194]
+
+ <State 3> : 3.92ns
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%col_assign = phi i32 [ 0, %0 ], [ %idxCol_1, %._crit_edge238 ]"
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%idxRow = phi i32 [ 0, %0 ], [ %idxRow_1, %._crit_edge238 ]"
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%pixConvolved = phi i32 [ 0, %0 ], [ %pixConvolved_2, %._crit_edge238 ]" [sobel_1212/core.cpp:241]
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%countWait = phi i19 [ 1, %0 ], [ %phitmp, %._crit_edge238 ]" [sobel_1212/core.cpp:194]
+ST_3 : Operation 31 [1/1] (2.43ns)   --->   "%exitcond3 = icmp eq i19 %countWait, -262143" [sobel_1212/core.cpp:194]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader.preheader, label %.preheader.preheader.i.i_ifconv" [sobel_1212/core.cpp:194]
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_s = zext i32 %col_assign to i64" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%lineBuff_val_1_V_ad = getelementptr [512 x i8]* %lineBuff_val_1_V, i64 0, i64 %tmp_s" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]
+ST_3 : Operation 35 [2/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo = load i8* %lineBuff_val_1_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%lineBuff_val_2_V_ad = getelementptr [512 x i8]* %lineBuff_val_2_V, i64 0, i64 %tmp_s" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]
+ST_3 : Operation 37 [2/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo = load i8* %lineBuff_val_2_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_39 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %idxRow, i32 1, i32 31)" [sobel_1212/core.cpp:221]
+ST_3 : Operation 39 [1/1] (2.47ns)   --->   "%icmp = icmp sgt i31 %tmp_39, 0" [sobel_1212/core.cpp:221]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_40 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %col_assign, i32 1, i32 31)" [sobel_1212/core.cpp:221]
+ST_3 : Operation 41 [1/1] (2.47ns)   --->   "%icmp3 = icmp sgt i31 %tmp_40, 0" [sobel_1212/core.cpp:221]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.93ns)   --->   "%or_cond = and i1 %icmp, %icmp3" [sobel_1212/core.cpp:221]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (2.47ns)   --->   "%tmp_21 = icmp slt i32 %col_assign, 511" [sobel_1212/core.cpp:241]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (2.55ns)   --->   "%idxCol = add nsw i32 %col_assign, 1" [sobel_1212/core.cpp:243]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (2.55ns)   --->   "%idxRow_4 = add nsw i32 %idxRow, 1" [sobel_1212/core.cpp:249]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (1.37ns)   --->   "%idxRow_1 = select i1 %tmp_21, i32 %idxRow, i32 %idxRow_4" [sobel_1212/core.cpp:241]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (2.43ns)   --->   "%tmp_23 = icmp ugt i19 %countWait, 513" [sobel_1212/core.cpp:254]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %tmp_23, label %2, label %._crit_edge238" [sobel_1212/core.cpp:254]
+
+ <State 4> : 6.89ns
+ST_4 : Operation 49 [1/1] (3.63ns)   --->   "%tmp_V_4 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src_V_V)" [sobel_1212/core.cpp:198]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 0> <FIFO>
+ST_4 : Operation 50 [1/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo = load i8* %lineBuff_val_1_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%lineBuff_val_0_V_ad = getelementptr [512 x i8]* %lineBuff_val_0_V, i64 0, i64 %tmp_s" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]
+ST_4 : Operation 52 [1/1] (3.25ns)   --->   "store i8 %lineBuff_val_1_V_lo, i8* %lineBuff_val_0_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_4 : Operation 53 [1/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo = load i8* %lineBuff_val_2_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_4 : Operation 54 [1/1] (3.25ns)   --->   "store i8 %lineBuff_val_2_V_lo, i8* %lineBuff_val_1_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:729->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:863->sobel_1212/core.cpp:201]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_4 : Operation 55 [1/1] (3.25ns)   --->   "store i8 %tmp_V_4, i8* %lineBuff_val_2_V_ad, align 1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:765->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:883->sobel_1212/core.cpp:202]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+
+ <State 5> : 5.81ns
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_20 = zext i32 %pixConvolved to i64" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%lineBuff_val_0_V_ad_6 = getelementptr [512 x i8]* %lineBuff_val_0_V, i64 0, i64 %tmp_20" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 58 [2/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo = load i8* %lineBuff_val_0_V_ad_6, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 59 [1/1] (2.55ns)   --->   "%pixConvolved_5 = add nsw i32 %pixConvolved, 1" [sobel_1212/core.cpp:210]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_118_0_1 = zext i32 %pixConvolved_5 to i64" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 61 [1/1] (2.55ns)   --->   "%col_assign_7_0_2 = add nsw i32 %pixConvolved, 2" [sobel_1212/core.cpp:210]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_118_0_2 = zext i32 %col_assign_7_0_2 to i64" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%lineBuff_val_0_V_ad_8 = getelementptr [512 x i8]* %lineBuff_val_0_V, i64 0, i64 %tmp_118_0_2" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 64 [2/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo_5 = load i8* %lineBuff_val_0_V_ad_8, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%lineBuff_val_1_V_ad_3 = getelementptr [512 x i8]* %lineBuff_val_1_V, i64 0, i64 %tmp_20" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 66 [2/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_3 = load i8* %lineBuff_val_1_V_ad_3, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%lineBuff_val_1_V_ad_4 = getelementptr [512 x i8]* %lineBuff_val_1_V, i64 0, i64 %tmp_118_0_1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 68 [2/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_4 = load i8* %lineBuff_val_1_V_ad_4, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%lineBuff_val_2_V_ad_6 = getelementptr [512 x i8]* %lineBuff_val_2_V, i64 0, i64 %tmp_20" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 70 [2/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_6 = load i8* %lineBuff_val_2_V_ad_6, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%lineBuff_val_2_V_ad_7 = getelementptr [512 x i8]* %lineBuff_val_2_V, i64 0, i64 %tmp_118_0_1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_5 : Operation 72 [2/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_7 = load i8* %lineBuff_val_2_V_ad_7, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node pixConvolved_2)   --->   "%pixConvolved_1 = select i1 %or_cond, i32 %pixConvolved_5, i32 %pixConvolved" [sobel_1212/core.cpp:221]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 74 [1/1] (1.37ns)   --->   "%idxCol_1 = select i1 %tmp_21, i32 %idxCol, i32 0" [sobel_1212/core.cpp:241]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 75 [1/1] (1.37ns) (out node of the LUT)   --->   "%pixConvolved_2 = select i1 %tmp_21, i32 %pixConvolved_1, i32 0" [sobel_1212/core.cpp:241]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 76 [1/1] (2.16ns)   --->   "%phitmp = add i19 %countWait, 1" [sobel_1212/core.cpp:194]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 3.25ns
+ST_6 : Operation 77 [1/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo = load i8* %lineBuff_val_0_V_ad_6, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%lineBuff_val_0_V_ad_7 = getelementptr [512 x i8]* %lineBuff_val_0_V, i64 0, i64 %tmp_118_0_1" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_6 : Operation 79 [2/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo_4 = load i8* %lineBuff_val_0_V_ad_7, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 80 [1/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo_5 = load i8* %lineBuff_val_0_V_ad_8, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 81 [1/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_3 = load i8* %lineBuff_val_1_V_ad_3, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 82 [1/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_4 = load i8* %lineBuff_val_1_V_ad_4, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%lineBuff_val_1_V_ad_5 = getelementptr [512 x i8]* %lineBuff_val_1_V, i64 0, i64 %tmp_118_0_2" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_6 : Operation 84 [2/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_5 = load i8* %lineBuff_val_1_V_ad_5, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 85 [1/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_6 = load i8* %lineBuff_val_2_V_ad_6, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 86 [1/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_7 = load i8* %lineBuff_val_2_V_ad_7, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%lineBuff_val_2_V_ad_8 = getelementptr [512 x i8]* %lineBuff_val_2_V, i64 0, i64 %tmp_118_0_2" [/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210]
+ST_6 : Operation 88 [2/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_8 = load i8* %lineBuff_val_2_V_ad_8, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+
+ <State 7> : 8.29ns
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%tmp = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_0_V_lo, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%p_shl1 = zext i13 %tmp to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_22 = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %lineBuff_val_0_V_lo, i3 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "%p_shl2 = zext i11 %tmp_22 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 93 [1/1] (2.01ns)   --->   "%val_V_3 = sub i14 %p_shl1, %p_shl2" [sobel_1212/core.cpp:213]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 94 [1/2] (3.25ns)   --->   "%lineBuff_val_0_V_lo_4 = load i8* %lineBuff_val_0_V_ad_7, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_25 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_0_V_lo_4, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%p_shl3 = zext i13 %tmp_25 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_26 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %lineBuff_val_0_V_lo_4, i1 false)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%p_shl4 = zext i9 %tmp_26 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 99 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%val_V_3_0_1 = sub i14 %p_shl3, %p_shl4" [sobel_1212/core.cpp:213]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_27 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_0_V_lo_5, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%p_shl5 = zext i13 %tmp_27 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_28 = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %lineBuff_val_0_V_lo_5, i3 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%p_shl6 = zext i11 %tmp_28 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 104 [1/1] (2.01ns)   --->   "%val_V_3_0_2 = sub i14 %p_shl5, %p_shl6" [sobel_1212/core.cpp:213]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_29 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_1_V_lo_3, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%p_shl7 = zext i13 %tmp_29 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_30 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %lineBuff_val_1_V_lo_3, i1 false)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%p_shl8 = zext i9 %tmp_30 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 109 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%val_V_3_1 = sub i14 %p_shl7, %p_shl8" [sobel_1212/core.cpp:213]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "%val_V_1_1_cast = zext i8 %lineBuff_val_1_V_lo_4 to i15" [sobel_1212/core.cpp:213]
+ST_7 : Operation 111 [1/1] (3.36ns)   --->   "%val_V_3_1_1 = mul i15 %val_V_1_1_cast, 37" [sobel_1212/core.cpp:213]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 112 [1/2] (3.25ns)   --->   "%lineBuff_val_1_V_lo_5 = load i8* %lineBuff_val_1_V_ad_5, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_31 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_1_V_lo_5, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%p_shl9 = zext i13 %tmp_31 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_32 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %lineBuff_val_1_V_lo_5, i1 false)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%p_shl10 = zext i9 %tmp_32 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 117 [1/1] (2.01ns)   --->   "%val_V_3_1_2 = sub i14 %p_shl9, %p_shl10" [sobel_1212/core.cpp:213]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%val_V_3_1_2_cast = zext i14 %val_V_3_1_2 to i15" [sobel_1212/core.cpp:213]
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_35 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_2_V_lo_7, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "%p_shl13 = zext i13 %tmp_35 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_36 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %lineBuff_val_2_V_lo_7, i1 false)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 122 [1/1] (0.00ns)   --->   "%p_shl14 = zext i9 %tmp_36 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 123 [1/1] (2.01ns)   --->   "%val_V_3_2_1 = sub i14 %p_shl13, %p_shl14" [sobel_1212/core.cpp:213]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 124 [1/2] (3.25ns)   --->   "%lineBuff_val_2_V_lo_8 = load i8* %lineBuff_val_2_V_ad_8, align 1" [sobel_1212/core.cpp:210]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_7 : Operation 125 [1/1] (0.00ns)   --->   "%tmp_37 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_2_V_lo_8, i5 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "%p_shl = zext i13 %tmp_37 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_38 = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %lineBuff_val_2_V_lo_8, i3 0)" [sobel_1212/core.cpp:210]
+ST_7 : Operation 128 [1/1] (0.00ns)   --->   "%p_shl15 = zext i11 %tmp_38 to i14" [sobel_1212/core.cpp:213]
+ST_7 : Operation 129 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%val_V_3_2_2 = sub i14 %p_shl, %p_shl15" [sobel_1212/core.cpp:213]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 130 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp2 = add i14 %val_V_3, %val_V_3_0_1" [sobel_1212/core.cpp:230]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 131 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp3 = add i14 %val_V_3_0_2, %val_V_3_1" [sobel_1212/core.cpp:230]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 132 [1/1] (3.02ns)   --->   "%tmp5 = add i15 %val_V_3_1_1, %val_V_3_1_2_cast" [sobel_1212/core.cpp:230]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 133 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp7 = add i14 %val_V_3_2_1, %val_V_3_2_2" [sobel_1212/core.cpp:230]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 8> : 7.96ns
+ST_8 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_33 = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %lineBuff_val_2_V_lo_6, i5 0)" [sobel_1212/core.cpp:210]
+ST_8 : Operation 135 [1/1] (0.00ns)   --->   "%p_shl11 = zext i13 %tmp_33 to i14" [sobel_1212/core.cpp:213]
+ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_34 = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %lineBuff_val_2_V_lo_6, i3 0)" [sobel_1212/core.cpp:210]
+ST_8 : Operation 137 [1/1] (0.00ns)   --->   "%p_shl12 = zext i11 %tmp_34 to i14" [sobel_1212/core.cpp:213]
+ST_8 : Operation 138 [1/1] (2.01ns)   --->   "%val_V_3_2 = sub i14 %p_shl11, %p_shl12" [sobel_1212/core.cpp:213]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 139 [1/1] (0.00ns)   --->   "%val_V_3_2_cast = zext i14 %val_V_3_2 to i15" [sobel_1212/core.cpp:213]
+ST_8 : Operation 140 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i14 %tmp2 to i15" [sobel_1212/core.cpp:230]
+ST_8 : Operation 141 [1/1] (0.00ns)   --->   "%tmp3_cast = zext i14 %tmp3 to i15" [sobel_1212/core.cpp:230]
+ST_8 : Operation 142 [1/1] (2.03ns)   --->   "%tmp1 = add i15 %tmp3_cast, %tmp2_cast" [sobel_1212/core.cpp:230]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 143 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i15 %tmp1 to i16" [sobel_1212/core.cpp:230]
+ST_8 : Operation 144 [1/1] (0.00ns)   --->   "%tmp5_cast = zext i15 %tmp5 to i16" [sobel_1212/core.cpp:230]
+ST_8 : Operation 145 [1/1] (0.00ns)   --->   "%tmp7_cast = zext i14 %tmp7 to i15" [sobel_1212/core.cpp:230]
+ST_8 : Operation 146 [1/1] (2.03ns)   --->   "%tmp6 = add i15 %tmp7_cast, %val_V_3_2_cast" [sobel_1212/core.cpp:230]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 147 [1/1] (0.00ns)   --->   "%tmp6_cast = zext i15 %tmp6 to i16" [sobel_1212/core.cpp:230]
+ST_8 : Operation 148 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i16 %tmp6_cast, %tmp5_cast" [sobel_1212/core.cpp:230]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 149 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%accumulator_V_2_2 = add i16 %tmp4, %tmp1_cast" [sobel_1212/core.cpp:230]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 150 [1/1] (0.00ns)   --->   "%out_x_V = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %accumulator_V_2_2, i32 8, i32 15)" [sobel_1212/core.cpp:234]
+
+ <State 9> : 5.00ns
+ST_9 : Operation 151 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 262144, i64 262144, i64 262144)"
+ST_9 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_17 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)" [sobel_1212/core.cpp:195]
+ST_9 : Operation 153 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [sobel_1212/core.cpp:196]
+ST_9 : Operation 154 [1/1] (1.37ns)   --->   "%tmp_V = select i1 %or_cond, i8 %out_x_V, i8 0" [sobel_1212/core.cpp:257]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 155 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_x_V_V, i8 %tmp_V)" [sobel_1212/core.cpp:256]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 0> <FIFO>
+ST_9 : Operation 156 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_y_V_V, i8 %tmp_V)" [sobel_1212/core.cpp:257]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 0> <FIFO>
+ST_9 : Operation 157 [1/1] (0.00ns)   --->   "br label %._crit_edge238" [sobel_1212/core.cpp:259]
+ST_9 : Operation 158 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_17)" [sobel_1212/core.cpp:260]
+ST_9 : Operation 159 [1/1] (0.00ns)   --->   "br label %1" [sobel_1212/core.cpp:194]
+
+ <State 10> : 1.77ns
+ST_10 : Operation 160 [1/1] (1.76ns)   --->   "br label %.preheader" [sobel_1212/core.cpp:263]
+
+ <State 11> : 3.63ns
+ST_11 : Operation 161 [1/1] (0.00ns)   --->   "%countWait_1 = phi i10 [ %countWait_4, %3 ], [ 0, %.preheader.preheader ]"
+ST_11 : Operation 162 [1/1] (1.77ns)   --->   "%exitcond = icmp eq i10 %countWait_1, -511" [sobel_1212/core.cpp:263]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 163 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 513, i64 513, i64 513)"
+ST_11 : Operation 164 [1/1] (1.95ns)   --->   "%countWait_4 = add i10 %countWait_1, 1" [sobel_1212/core.cpp:263]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 165 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %4, label %3" [sobel_1212/core.cpp:263]
+ST_11 : Operation 166 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_x_V_V, i8 0)" [sobel_1212/core.cpp:267]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 0> <FIFO>
+ST_11 : Operation 167 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %dst_y_V_V, i8 0)" [sobel_1212/core.cpp:268]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 0> <FIFO>
+ST_11 : Operation 168 [1/1] (0.00ns)   --->   "br label %.preheader" [sobel_1212/core.cpp:263]
+ST_11 : Operation 169 [1/1] (0.00ns)   --->   "ret void" [sobel_1212/core.cpp:271]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', sobel_1212/core.cpp:173) [12]  (1.77 ns)
+
+ <State 2>: 2.23ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond2', sobel_1212/core.cpp:173) [13]  (1.3 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 3>: 3.92ns
+The critical path consists of the following:
+	'phi' operation ('idxRow') with incoming values : ('idxRow', sobel_1212/core.cpp:241) [23]  (0 ns)
+	'add' operation ('idxRow', sobel_1212/core.cpp:249) [133]  (2.55 ns)
+	'select' operation ('idxRow', sobel_1212/core.cpp:241) [135]  (1.37 ns)
+
+ <State 4>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'src_V_V' (sobel_1212/core.cpp:198) [32]  (3.63 ns)
+	'store' operation (/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:765->/usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:883->sobel_1212/core.cpp:202) of variable 'tmp.V', sobel_1212/core.cpp:198 on array 'lineBuff.val[2].V', sobel_1212/core.cpp:177 [41]  (3.25 ns)
+
+ <State 5>: 5.81ns
+The critical path consists of the following:
+	'add' operation ('pixConvolved', sobel_1212/core.cpp:210) [50]  (2.55 ns)
+	'getelementptr' operation ('lineBuff_val_1_V_ad_4', /usr/local/packages/xilinx_2017.4/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:835->sobel_1212/core.cpp:210) [75]  (0 ns)
+	'load' operation ('lineBuff_val_1_V_lo_4', sobel_1212/core.cpp:210) on array 'lineBuff.val[1].V', sobel_1212/core.cpp:177 [76]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('lineBuff_val_0_V_lo', sobel_1212/core.cpp:210) on array 'lineBuff.val[0].V', sobel_1212/core.cpp:177 [44]  (3.25 ns)
+
+ <State 7>: 8.29ns
+The critical path consists of the following:
+	'load' operation ('lineBuff_val_1_V_lo_5', sobel_1212/core.cpp:210) on array 'lineBuff.val[1].V', sobel_1212/core.cpp:177 [80]  (3.25 ns)
+	'sub' operation ('val_V_3_1_2', sobel_1212/core.cpp:213) [85]  (2.02 ns)
+	'add' operation ('tmp5', sobel_1212/core.cpp:230) [120]  (3.02 ns)
+
+ <State 8>: 7.96ns
+The critical path consists of the following:
+	'sub' operation ('val_V_3_2', sobel_1212/core.cpp:213) [93]  (2.02 ns)
+	'add' operation ('tmp6', sobel_1212/core.cpp:230) [124]  (2.04 ns)
+	'add' operation ('tmp4', sobel_1212/core.cpp:230) [126]  (0 ns)
+	'add' operation ('accumulator_V_2_2', sobel_1212/core.cpp:230) [127]  (3.9 ns)
+
+ <State 9>: 5ns
+The critical path consists of the following:
+	'select' operation ('tmp.V', sobel_1212/core.cpp:257) [129]  (1.37 ns)
+	fifo write on port 'dst_x_V_V' (sobel_1212/core.cpp:256) [140]  (3.63 ns)
+
+ <State 10>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('countWait') with incoming values : ('countWait', sobel_1212/core.cpp:263) [150]  (1.77 ns)
+
+ <State 11>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'dst_x_V_V' (sobel_1212/core.cpp:267) [156]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,249 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'image_filter'" level="0">
+<item name = "Date">Fri Dec 13 11:11:35 2019
+</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">sobel_1212</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.75</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="bgr2gray_U0">bgr2gray, 262171, 262171, 262171, 262171, none</column>
+<column name="addWeighted_U0">addWeighted, 262165, 262165, 262165, 262165, none</column>
+<column name="gaussianBlur_U0">gaussianBlur, 786960, 786960, 786960, 786960, none</column>
+<column name="sobel_y_U0">sobel_y, 786951, 786951, 786951, 786951, none</column>
+<column name="sobel_x_U0">sobel_x, 786950, 786950, 786950, 786950, none</column>
+<column name="Stream2Mem_Batch_U0">Stream2Mem_Batch, ?, ?, ?, ?, none</column>
+<column name="Mem2Stream_Batch9_U0">Mem2Stream_Batch9, ?, ?, ?, ?, none</column>
+<column name="gray2bgr_U0">gray2bgr, 262146, 262146, 262146, 262146, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 24</column>
+<column name="FIFO">10, -, 309, 453</column>
+<column name="Instance">13, 65, 9497, 17494</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">8, 29, 9, 33</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Mem2Stream_Batch9_U0">Mem2Stream_Batch9, 0, 0, 286, 881</column>
+<column name="Stream2Mem_Batch_U0">Stream2Mem_Batch, 0, 0, 283, 993</column>
+<column name="addWeighted_U0">addWeighted, 0, 25, 2356, 4409</column>
+<column name="bgr2gray_U0">bgr2gray, 0, 39, 3960, 6769</column>
+<column name="gaussianBlur_U0">gaussianBlur, 3, 1, 519, 1062</column>
+<column name="gray2bgr_U0">gray2bgr, 0, 0, 26, 156</column>
+<column name="image_filter_CONTROL_BUS_s_axi_U">image_filter_CONTROL_BUS_s_axi, 0, 0, 188, 296</column>
+<column name="image_filter_hostmem_1_m_axi_U">image_filter_hostmem_1_m_axi, 2, 0, 512, 580</column>
+<column name="image_filter_hostmem_2_m_axi_U">image_filter_hostmem_2_m_axi, 2, 0, 512, 580</column>
+<column name="sobel_x_U0">sobel_x, 3, 0, 407, 870</column>
+<column name="sobel_y_U0">sobel_y, 3, 0, 448, 898</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="addWeight_stream_V_V_U">1, 32, 48, 128, 8, 1024</column>
+<column name="gaussian_stream_x_V_s_U">1, 32, 48, 128, 8, 1024</column>
+<column name="gaussian_stream_y_V_s_U">1, 32, 48, 128, 8, 1024</column>
+<column name="gray_stream_V_V_U">1, 32, 48, 128, 8, 1024</column>
+<column name="in_stream_V_V_U">2, 56, 60, 128, 32, 4096</column>
+<column name="out_V_c_U">0, 5, 45, 6, 32, 192</column>
+<column name="out_stream_V_V_U">2, 56, 60, 128, 32, 4096</column>
+<column name="sobel_stream_x_V_V_U">1, 32, 48, 128, 8, 1024</column>
+<column name="sobel_stream_y_V_V_U">1, 32, 48, 128, 8, 1024</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Mem2Stream_Batch9_U0_start_full_n">and, 0, 0, 8, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 8, 1, 1</column>
+<column name="gaussianBlur_U0_start_full_n">and, 0, 0, 8, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_BUS_AWVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_AWREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_AWADDR">in, 6, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WDATA">in, 32, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WSTRB">in, 4, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARADDR">in, 6, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RVALID">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RREADY">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RDATA">out, 32, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RRESP">out, 2, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BVALID">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BREADY">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BRESP">out, 2, s_axi, CONTROL_BUS, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="m_axi_hostmem_1_AWVALID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWREADY">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWADDR">out, 32, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWLEN">out, 8, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWSIZE">out, 3, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWBURST">out, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWLOCK">out, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWCACHE">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWPROT">out, 3, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWQOS">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWREGION">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_AWUSER">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WVALID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WREADY">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WDATA">out, 32, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WSTRB">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WLAST">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_WUSER">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARVALID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARREADY">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARADDR">out, 32, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARID">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARLEN">out, 8, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARSIZE">out, 3, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARBURST">out, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARLOCK">out, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARCACHE">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARPROT">out, 3, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARQOS">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARREGION">out, 4, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_ARUSER">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RVALID">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RREADY">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RDATA">in, 32, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RLAST">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RID">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RUSER">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_RRESP">in, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_BVALID">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_BREADY">out, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_BRESP">in, 2, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_BID">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_1_BUSER">in, 1, m_axi, hostmem_1, pointer</column>
+<column name="m_axi_hostmem_2_AWVALID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWREADY">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWADDR">out, 32, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWLEN">out, 8, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWSIZE">out, 3, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWBURST">out, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWLOCK">out, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWCACHE">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWPROT">out, 3, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWQOS">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWREGION">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_AWUSER">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WVALID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WREADY">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WDATA">out, 32, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WSTRB">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WLAST">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_WUSER">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARVALID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARREADY">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARADDR">out, 32, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARID">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARLEN">out, 8, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARSIZE">out, 3, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARBURST">out, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARLOCK">out, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARCACHE">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARPROT">out, 3, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARQOS">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARREGION">out, 4, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_ARUSER">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RVALID">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RREADY">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RDATA">in, 32, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RLAST">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RID">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RUSER">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_RRESP">in, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_BVALID">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_BREADY">out, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_BRESP">in, 2, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_BID">in, 1, m_axi, hostmem_2, pointer</column>
+<column name="m_axi_hostmem_2_BUSER">in, 1, m_axi, hostmem_2, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">4.63</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'out.V'">read, 1.00, 1.00, -, -, -, s_axi, read, &apos;out_V&apos;, -, -, -, -, -</column>
+<column name="">call, 3.63, 4.63, -, -, -, -, -, -, -, -, -, Mem2Stream_Batch9, -</column>
+</table>
+</item>
+</section>
+</profile>

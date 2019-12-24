@@ -1,0 +1,446 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="swap_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_cos_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_cos_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_cos_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_cos_K3"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_cos_K4"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::cos_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::cos_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::cos_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::cos_K3"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::cos_K4"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_K3"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="fourth_order_double::sin_K4"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="swap_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_cos_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_cos_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_cos_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::cos_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::cos_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::cos_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sincos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="second_order_float::sin_K2"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="first_order_fixed_16::sin_cos_K0"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sin_or_cos_approximation" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="first_order_fixed_16::sin_cos_K1"/>
+<option name="core" value="ROM_1P_LUTRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="swap_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_sin_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_cos_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="swap_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_sin_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_cos_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_sin_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sinf_or_cosf" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="neg_cos_table"/>
+<option name="complete" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="generic_tan" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="generic_atan2" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="generic_atan2" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="sinh_cosh_range_redux_cordic" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="sinh_cosh_range_redux_cordic" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="exp" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="log" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="log10" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="sqrt_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="rsqrt_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="recip_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="ceil_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="ceil_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="trunc_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="trunc_fixed" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="Mem2Stream" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Stream2Mem" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="StreamingDataWidthConverter_Batch" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="StreamingDataWidthConverter_Batch" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="StreamingDataWidthConverter_Batch" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="rows"/>
+<option name="bundle" value="CONTROL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="cols"/>
+<option name="bundle" value="CONTROL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+<option name="bundle" value="CONTROL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="256"/>
+<option name="port" positionalBoolean="4" value="in"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="hostmem_1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="in"/>
+<option name="bundle" value="CONTROL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="256"/>
+<option name="port" positionalBoolean="4" value="out"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="hostmem_2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="out"/>
+<option name="bundle" value="CONTROL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="in_stream"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="gray_stream"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="gaussian_stream_x"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="gaussian_stream_y"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sobel_stream_x"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="sobel_stream_y"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="addWeight_stream"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="image_filter" label="">
+<pragma name="STREAM">
+<option name="variable" positionalBoolean="4" value="out_stream"/>
+<option name="depth" value="128"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="bgr2gray" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="gray2bgr" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Array2Mat" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Array2Mat" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Array2Mat" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Mat2Array" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Mat2Array" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Mat2Array" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="gaussianBlur" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="sobel_x" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="sobel_y" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="addWeighted" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

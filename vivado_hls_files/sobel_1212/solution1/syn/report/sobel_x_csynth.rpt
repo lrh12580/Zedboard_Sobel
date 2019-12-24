@@ -1,0 +1,233 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_x'
+================================================================
+* Date:           Fri Dec 13 11:11:32 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        sobel_1212
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.51|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  786950|  786950|  786950|  786950|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  786434|  786434|         6|          3|          1|  262144|    yes   |
+        |- Loop 2  |     513|     513|         1|          -|          -|     513|    no    |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    628|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        3|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|    242|
+|Register         |        -|      -|     407|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      0|     407|    870|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      0|   ~0   |      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +--------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |       Memory       |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |lineBuff_val_0_V_U  |gaussianBlur_linefYi  |        1|  0|   0|   512|    8|     1|         4096|
+    |lineBuff_val_1_V_U  |gaussianBlur_linefYi  |        1|  0|   0|   512|    8|     1|         4096|
+    |lineBuff_val_2_V_U  |gaussianBlur_linefYi  |        1|  0|   0|   512|    8|     1|         4096|
+    +--------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total               |                      |        3|  0|   0|  1536|   24|     3|        12288|
+    +--------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |accumulator_V_1_2_fu_474_p2       |     +    |      0|  0|   8|          11|          11|
+    |accumulator_V_2_2_fu_497_p2       |     +    |      0|  0|   8|          11|          11|
+    |col_assign_4_0_2_fu_363_p2        |     +    |      0|  0|  39|           2|          32|
+    |countWait_3_fu_541_p2             |     +    |      0|  0|  17|          10|           1|
+    |idxCol_fu_324_p2                  |     +    |      0|  0|  39|           1|          32|
+    |idxRow_3_fu_330_p2                |     +    |      0|  0|  39|           1|          32|
+    |out_V_fu_503_p2                   |     +    |      0|  0|   8|           8|           8|
+    |phitmp_fu_396_p2                  |     +    |      0|  0|  26|          19|           1|
+    |pixConvolved_4_fu_357_p2          |     +    |      0|  0|  39|           1|          32|
+    |tmp_15_fu_480_p2                  |     +    |      0|  0|   8|           8|           8|
+    |accumulator_V_0_2_fu_410_p2       |     -    |      0|  0|  16|           9|           9|
+    |accumulator_V_1_fu_458_p2         |     -    |      0|  0|   8|          11|          11|
+    |accumulator_V_2_fu_486_p2         |     -    |      0|  0|   8|          11|          11|
+    |out_V_3_fu_515_p2                 |     -    |      0|  0|  15|           1|           8|
+    |tmp_10_fu_416_p2                  |     -    |      0|  0|  15|           8|           8|
+    |tmp_11_fu_464_p2                  |     -    |      0|  0|   8|           8|           8|
+    |tmp_16_fu_492_p2                  |     -    |      0|  0|   8|           8|           8|
+    |ap_block_pp0_stage1_11001         |    and   |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage2_01001         |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0  |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state7_pp0_stage2_iter1  |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state9                   |    and   |      0|  0|   8|           1|           1|
+    |or_cond_fu_312_p2                 |    and   |      0|  0|   8|           1|           1|
+    |exitcond6_fu_268_p2               |   icmp   |      0|  0|  18|          19|          19|
+    |exitcond_fu_535_p2                |   icmp   |      0|  0|  13|          10|          10|
+    |icmp2_fu_306_p2                   |   icmp   |      0|  0|  18|          31|           1|
+    |icmp_fu_290_p2                    |   icmp   |      0|  0|  18|          31|           1|
+    |tmp_18_fu_318_p2                  |   icmp   |      0|  0|  18|          32|           9|
+    |tmp_19_fu_344_p2                  |   icmp   |      0|  0|  18|          19|          10|
+    |ap_block_state1                   |    or    |      0|  0|   8|           1|           1|
+    |idxCol_1_fu_383_p3                |  select  |      0|  0|  32|           1|          32|
+    |idxRow_1_fu_336_p3                |  select  |      0|  0|  32|           1|          32|
+    |out_V_4_fu_520_p3                 |  select  |      0|  0|   8|           1|           8|
+    |pixConvolved_1_fu_376_p3          |  select  |      0|  0|  32|           1|          32|
+    |pixConvolved_2_fu_389_p3          |  select  |      0|  0|  32|           1|          32|
+    |tmp_V_fu_527_p3                   |  select  |      0|  0|   8|           1|           8|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   8|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 628|         286|         435|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                              |  38|          7|    1|          7|
+    |ap_done                                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                |  15|          3|    1|          3|
+    |ap_phi_mux_col_assign_phi_fu_215_p4    |   9|          2|   32|         64|
+    |ap_phi_mux_countWait_phi_fu_249_p4     |   9|          2|   19|         38|
+    |ap_phi_mux_idxRow_phi_fu_226_p4        |   9|          2|   32|         64|
+    |ap_phi_mux_pixConvolved_phi_fu_237_p4  |   9|          2|   32|         64|
+    |col_assign_reg_211                     |   9|          2|   32|         64|
+    |countWait_1_reg_257                    |   9|          2|   10|         20|
+    |countWait_reg_245                      |   9|          2|   19|         38|
+    |dst_V_V_blk_n                          |   9|          2|    1|          2|
+    |dst_V_V_din                            |  15|          3|    8|         24|
+    |idxRow_reg_222                         |   9|          2|   32|         64|
+    |lineBuff_val_0_V_address0              |  15|          3|    9|         27|
+    |lineBuff_val_1_V_address0              |  21|          4|    9|         36|
+    |lineBuff_val_2_V_address0              |  21|          4|    9|         36|
+    |pixConvolved_reg_233                   |   9|          2|   32|         64|
+    |real_start                             |   9|          2|    1|          2|
+    |src_V_V_blk_n                          |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 242|         50|  281|        621|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |accumulator_V_0_2_reg_661           |   9|   0|    9|          0|
+    |accumulator_V_2_2_reg_671           |  11|   0|   11|          0|
+    |ap_CS_fsm                           |   6|   0|    6|          0|
+    |ap_done_reg                         |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_exitcond6_reg_547  |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_or_cond_reg_566    |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_tmp_19_reg_588     |   1|   0|    1|          0|
+    |col_assign_reg_211                  |  32|   0|   32|          0|
+    |countWait_1_reg_257                 |  10|   0|   10|          0|
+    |countWait_reg_245                   |  19|   0|   19|          0|
+    |exitcond6_reg_547                   |   1|   0|    1|          0|
+    |idxCol_1_reg_622                    |  32|   0|   32|          0|
+    |idxCol_reg_578                      |  32|   0|   32|          0|
+    |idxRow_1_reg_583                    |  32|   0|   32|          0|
+    |idxRow_reg_222                      |  32|   0|   32|          0|
+    |lineBuff_val_1_V_ad_reg_556         |   9|   0|    9|          0|
+    |lineBuff_val_1_V_lo_1_reg_637       |   8|   0|    8|          0|
+    |lineBuff_val_1_V_lo_2_reg_643       |   8|   0|    8|          0|
+    |lineBuff_val_2_V_ad_reg_561         |   9|   0|    9|          0|
+    |lineBuff_val_2_V_lo_4_reg_649       |   8|   0|    8|          0|
+    |lineBuff_val_2_V_lo_5_reg_655       |   8|   0|    8|          0|
+    |or_cond_reg_566                     |   1|   0|    1|          0|
+    |out_V_reg_676                       |   8|   0|    8|          0|
+    |phitmp_reg_632                      |  19|   0|   19|          0|
+    |pixConvolved_2_reg_627              |  32|   0|   32|          0|
+    |pixConvolved_reg_233                |  32|   0|   32|          0|
+    |start_once_reg                      |   1|   0|    1|          0|
+    |tmp_10_reg_666                      |   8|   0|    8|          0|
+    |tmp_18_reg_572                      |   1|   0|    1|          0|
+    |tmp_19_reg_588                      |   1|   0|    1|          0|
+    |tmp_s_reg_551                       |  32|   0|   64|         32|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               | 407|   0|  439|         32|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_start         |  in |    1| ap_ctrl_hs |    sobel_x   | return value |
+|start_full_n     |  in |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_done          | out |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_continue      |  in |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_idle          | out |    1| ap_ctrl_hs |    sobel_x   | return value |
+|ap_ready         | out |    1| ap_ctrl_hs |    sobel_x   | return value |
+|start_out        | out |    1| ap_ctrl_hs |    sobel_x   | return value |
+|start_write      | out |    1| ap_ctrl_hs |    sobel_x   | return value |
+|src_V_V_dout     |  in |    8|   ap_fifo  |    src_V_V   |    pointer   |
+|src_V_V_empty_n  |  in |    1|   ap_fifo  |    src_V_V   |    pointer   |
+|src_V_V_read     | out |    1|   ap_fifo  |    src_V_V   |    pointer   |
+|dst_V_V_din      | out |    8|   ap_fifo  |    dst_V_V   |    pointer   |
+|dst_V_V_full_n   |  in |    1|   ap_fifo  |    dst_V_V   |    pointer   |
+|dst_V_V_write    | out |    1|   ap_fifo  |    dst_V_V   |    pointer   |
++-----------------+-----+-----+------------+--------------+--------------+
+

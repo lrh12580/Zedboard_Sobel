@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'gray2bgr'
+================================================================
+* Date:           Fri Dec 13 11:11:28 2019
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        sobel_1212
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.27|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  262146|  262146|  262146|  262146|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |          |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |  262144|  262144|         2|          1|          1|  262144|    yes   |
+        +----------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (exitcond)
+	3  / (!exitcond)
+3 --> 
+	2  / true
+4 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %dst_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str168, i32 0, i32 0, [1 x i8]* @p_str169, [1 x i8]* @p_str170, [1 x i8]* @p_str171, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str172, [1 x i8]* @p_str173)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str161, i32 0, i32 0, [1 x i8]* @p_str162, [1 x i8]* @p_str163, [1 x i8]* @p_str164, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str165, [1 x i8]* @p_str166)"
+ST_1 : Operation 7 [1/1] (1.76ns)   --->   "br label %1" [sobel_1212/core.cpp:95]
+
+ <State 2> : 2.44ns
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%i = phi i19 [ 0, %0 ], [ %i_1, %2 ]"
+ST_2 : Operation 9 [1/1] (2.43ns)   --->   "%exitcond = icmp eq i19 %i, -262144" [sobel_1212/core.cpp:95]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (2.16ns)   --->   "%i_1 = add i19 %i, 1" [sobel_1212/core.cpp:95]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %2" [sobel_1212/core.cpp:95]
+
+ <State 3> : 7.27ns
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 262144, i64 262144, i64 262144)"
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [sobel_1212/core.cpp:95]
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [sobel_1212/core.cpp:96]
+ST_3 : Operation 15 [1/1] (3.63ns)   --->   "%tmp_V = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %src_V_V)" [sobel_1212/core.cpp:97]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 -1, i8 %tmp_V, i8 %tmp_V, i8 %tmp_V)" [sobel_1212/core.cpp:103]
+ST_3 : Operation 17 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %dst_V_V, i32 %p_Result_s)" [sobel_1212/core.cpp:104]   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp)" [sobel_1212/core.cpp:105]
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "br label %1" [sobel_1212/core.cpp:95]
+
+ <State 4> : 0.00ns
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "ret void" [sobel_1212/core.cpp:106]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', sobel_1212/core.cpp:95) [7]  (1.77 ns)
+
+ <State 2>: 2.44ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sobel_1212/core.cpp:95) [7]  (0 ns)
+	'icmp' operation ('exitcond', sobel_1212/core.cpp:95) [8]  (2.44 ns)
+
+ <State 3>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'src_V_V' (sobel_1212/core.cpp:97) [15]  (3.63 ns)
+	fifo write on port 'dst_V_V' (sobel_1212/core.cpp:104) [17]  (3.63 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
